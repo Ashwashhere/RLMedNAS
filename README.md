@@ -4,8 +4,7 @@
     Standard Neural Architecture Search (NAS) frameworks driven by Reinforcement Learning face a significant computational bottleneck: the agent routinely wastes massive GPU cycles exploring invalid, broken, or mathematically unviable layer configurations. 
   </p>
   <p>
-    This project addresses that constraint by engineering an autonomous **Reinforcement Learning Controller (RNN)** to automate CNN architecture design for medical imaging workflows[cite: 87]. By integrating domain-specific structural constraints directly into a **"Masked" Agent**, invalid network paths are systematically pruned *before* child network compilation[cite: 88]. This targeted search space reduction forces the controller to focus exclusively on high-performance paths, dramatically accelerating convergence efficiency[cite: 88].
-  </p>
+    This project addresses that constraint by engineering an autonomous **Reinforcement Learning Controller (RNN)** to automate CNN architecture design for medical imaging workflows.By integrating domain-specific structural constraints directly into a **"Masked" Agent**, invalid network paths are systematically pruned *before* child network compilation.This targeted search space reduction forces the controller to focus exclusively on high-performance paths, dramatically accelerating convergence efficiency.</p>
 </section>
 
 <hr />
@@ -38,8 +37,8 @@
       </tr>
       <tr style="border-bottom: 1px solid #21262d; background-color: rgba(56, 139, 253, 0.1);">
         <td style="padding: 12px; font-weight: bold; color: #58a6ff;">Masked RL Controller (Ours)</td>
-        <td style="padding: 12px; text-align: center; font-weight: bold; color: #3fb950;">96.7% [cite: 88]</td>
-        <td style="padding: 12px; text-align: center; font-weight: bold; color: #58a6ff;">3x Reduction [cite: 88]</td>
+        <td style="padding: 12px; text-align: center; font-weight: bold; color: #3fb950;">96.7%</td>
+        <td style="padding: 12px; text-align: center; font-weight: bold; color: #58a6ff;">3x Reduction</td>
         <td style="padding: 12px; font-weight: 500;">Enforced Validity Mask (Prunes invalid paths)</td>
       </tr>
     </tbody>
@@ -54,9 +53,7 @@
   
   <pre style="background-color: #161b22; color: #e6edf3; padding: 16px; border-radius: 6px; overflow-x: auto; font-family: monospace; line-height: 1.4;">
 ├── controllers/
-│   ├── rnn_agent.py          # RNN controller policy network configuration
-│   └── validity_mask.py      # Search space constraint masking logic tensor operations
-├── environment/
+│   ├── rnn_agent.py          # RNN controller policy network configuration│   └── validity_mask.py      # Search space constraint masking logic tensor operations├── environment/
 │   ├── child_network.py      # Dynamic CNN generation & compilation script
 │   └── evaluator.py          # Reward calculation engine and MedMNIST data hub
 ├── utils/
@@ -89,7 +86,5 @@ python main.py --mode masked --episodes 100 --dataset medmnist</pre>
 <section id="evolution">
   <h2>📈 Project Evolution & Next Steps</h2>
   <blockquote style="margin: 20px 0; padding: 0 1em; color: #8b949e; border-left: .25em solid #30363d;">
-    This repository details the foundational <strong>Semester 1</strong> design framework tailored specifically around constraint masking logic inside discrete search spaces. 
-    This codebase serves as the core architectural baseline for my ongoing <strong>MSc Graduate Thesis Project: RLMedNAS for Liver Cirrhosis Classification</strong>[cite: 4, 15]. The extended production framework scales the search environment into complex Directed Acyclic Graphs (DAGs) utilising <strong>PyTorch Geometric (PyG)</strong> [cite: 26] and integrates highly specialised 3D imaging pipelines utilising <strong>MONAI</strong>[cite: 24].
-  </blockquote>
+    This repository details the foundational <strong>Semester 1</strong> design framework tailored specifically around constraint masking logic inside discrete search spaces.This codebase serves as the core architectural baseline for my ongoing <strong>MSc Graduate Thesis Project: RLMedNAS for Liver Cirrhosis Classification</strong>.The extended production framework scales the search environment into complex Directed Acyclic Graphs (DAGs) utilising <strong>PyTorch Geometric (PyG)</strong>and integrates highly specialised 3D imaging pipelines utilising <strong>MONAI</strong>.</blockquote>
 </section>
