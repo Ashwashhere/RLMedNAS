@@ -4,7 +4,7 @@
     Standard Neural Architecture Search (NAS) frameworks driven by Reinforcement Learning face a significant computational bottleneck: the agent routinely wastes massive GPU cycles exploring invalid, broken, or mathematically unviable layer configurations. 
   </p>
   <p>
-    This project addresses that constraint by engineering an autonomous **Reinforcement Learning Controller (RNN)** to automate CNN architecture design for medical imaging workflows.By integrating domain-specific structural constraints directly into a **"Masked" Agent**, invalid network paths are systematically pruned *before* child network compilation.This targeted search space reduction forces the controller to focus exclusively on high-performance paths, dramatically accelerating convergence efficiency.</p>
+    This project addresses that constraint by engineering an autonomous Reinforcement Learning Controller (RNN) to automate CNN architecture design for medical imaging workflows.By integrating domain-specific structural constraints directly into a "Masked" Agent, invalid network paths are systematically pruned *before* child network compilation.This targeted search space reduction forces the controller to focus exclusively on high-performance paths, dramatically accelerating convergence efficiency.</p>
 </section>
 
 <hr />
